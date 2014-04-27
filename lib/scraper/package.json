@@ -1,0 +1,24 @@
+{
+  "name": "kepler-planets-visualization-scraper",
+  "version": "0.0.1",
+  "description": "scrapes planets from the nasa kepler site.",
+  "main": "app.js",
+  "dependencies": {
+    "cheerio": "^0.15.0",
+    "jquery": "~2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/korve/kepler-planets-visualization"
+  },
+  "author": "korve <aeckardt@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/korve/kepler-planets-visualization/issues"
+  },
+  "homepage": "https://github.com/korve/kepler-planets-visualization"
+}
