@@ -5,8 +5,12 @@
 $(function(){
 
 	var planetContainer = $('.planets'),
-		data = [],
+		metaTitle = $('planet-title'),
+		metaContainer = $('.planet-meta');
+
+	var data = [],
 		earthData = {
+			mass: new BigNumber(5.97219, 24),
 			massEarth: 1,
 			massJupiter: 0.00314,
 			radiusEarth: 1,
@@ -72,19 +76,27 @@ $(function(){
 				return;
 
 			var rad = (baseRadius * planet[sizeKey]).toFixed(6);
-			canvas.circle(x, y, rad)
+			var el = canvas.circle(x, y, rad)
 				.attr({
 					'stroke': 'rgba(145, 244, 184, .8)',
 					'stroke-width': 0,
 					'fill': 'rgba(145, 244, 184, 0.025)'
 				})
-				.data('planet', planet)
-				.hover(function hIn() {
-						this.attr('stroke-width', 5);
-					},
-					function hOut() {
-						this.attr('stroke-width', 0);
-					})
+				.data('planet', planet);
+
+			el.hover(function hIn() {
+					this.el.attr('stroke-width', 5);
+
+					var data = '';
+					data += 'Mass:\t' + this.planet.massEarth;
+
+					metaContainer.html(this.planet.join('\r\n'));
+				},
+				function hOut() {
+					this.el.attr('stroke-width', 0);
+				},
+				{ el: el, planet: planet}
+			);
 		});
 
 		canvas.circle(x, y, baseRadius + 4)
