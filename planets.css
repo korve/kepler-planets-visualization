@@ -2,10 +2,6 @@ body {
 	background: #232323;
 }
 
-h1 {
-	color: #4f9edd;
-}
-
 p {
 	color: #616161;
 }
@@ -14,9 +10,14 @@ p {
 	z-index: 400
 }
 
+.container-top {
+	margin-bottom: 50px;
+}
+
 .page-header {
 	border-color: #4f9edd;
 }
+
 .planet:hover {
 	background: rgba(141, 186, 244, 0);
 	cursor: pointer;
@@ -27,14 +28,21 @@ p {
 .planets {
 	width: 100%;
 	overflow: auto;
-	margin-top: 50px;
+}
+
+.planets circle {
+	cursor: pointer;
 }
 
 .legend, .btn-group-filter {
 	float: left;
 }
 
-.btn-group-filter .btn {
+.btn-group-filter {
+	margin-right: 10px;
+}
+
+.btn-group-filter .btn, label {
 	background: #232323;
 	color: #fff
 }
@@ -45,6 +53,7 @@ p {
 	list-style: none;
 	line-height: 30px;
 	margin-right: 30px;
+	margin-top: 25px;
 }
 
 .legend li .legend-earth,
@@ -60,6 +69,23 @@ p {
 .legend li .legend-planet {
 	background: rgba(145, 244, 184, 0.5);
 	border: 0;
+}
+
+.meta-container {
+	position: absolute;
+	left: 0;
+	margin: 50px 0 0 50px;
+	background: rgba(35, 35, 35, .8);
+	z-index: 500;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.meta-container pre {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	color: #ffffff;
 }
 
 .footer {

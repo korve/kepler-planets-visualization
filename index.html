@@ -3,25 +3,33 @@ layout: bootstrap-template
 title: Kepler planet discoveries
 ---
 <link rel="stylesheet" href="planets.css"/>
-<script src="raphael-min.js"></script>
-<script src="planets.js"></script>
+<script src="js/bignumber.min.js"></script>
+<script src="js/raphael-min.js"></script>
+<script src="js/planets.js"></script>
 
-<div class="container">
+<div class="container container-top">
     <div class="row">
-        <div class="page-header inverse">
-            <h1>Kepler planet discoveries</h1>
-        </div>
-
+        <br/>
         <div class="col-xs-12 meta-bar">
             <div class="btn-group btn-group-filter" id="btn-sort-by">
+                <label>Compare by</label>
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    Sort by <span class="caret"></span>
+                    <span class="compare-by-label">Radius</span> <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#" data-sort-key="radius">Radius</a></li>
-                    <li><a href="#" data-sort-key="mass">Mass</a></li>
+                    <li><a href="#" data-sort-key="radiusEarth">Radius</a></li>
+                    <li><a href="#" data-sort-key="massEarth">Mass</a></li>
                     <li><a href="#" data-sort-key="density">Density</a></li>
                     <li><a href="#" data-sort-key="ecc">Eccentricity</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group btn-group-filter" id="btn-planet">
+                <label>Compare by</label>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="compare-with-label">Earth</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-planet" role="menu">
                 </ul>
             </div>
 
@@ -33,7 +41,13 @@ title: Kepler planet discoveries
     </div>
 </div>
 
+<div class="meta-container">
+    <h5 class="planet-title"></h5>
+    <pre class="planet-data"></pre>
+</div>
+
 <div class="planets"></div>
+
 <div class="footer">
     <p>2014 André Eckardt (<a href="https://github.com/korve/">https://github.com/korve/</a>)</p>
 </div>
