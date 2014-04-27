@@ -1,2 +1,2 @@
-kepler-planets-visualization
+Kepler Planet discoveries visualization
 ============================

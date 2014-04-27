@@ -1,0 +1,76 @@
+body {
+	background: #232323;
+}
+
+h1 {
+	color: #4f9edd;
+}
+
+p {
+	color: #616161;
+}
+
+.meta-bar {
+	z-index: 400
+}
+
+.page-header {
+	border-color: #4f9edd;
+}
+.planet:hover {
+	background: rgba(141, 186, 244, 0);
+	cursor: pointer;
+	opacity: 1;
+	border: 5px solid #fff;
+}
+
+.planets {
+	width: 100%;
+	overflow: auto;
+	margin-top: 50px;
+}
+
+.legend, .btn-group-filter {
+	float: left;
+}
+
+.btn-group-filter .btn {
+	background: #232323;
+	color: #fff
+}
+
+.legend li {
+	color: #fff;
+	float: left;
+	list-style: none;
+	line-height: 30px;
+	margin-right: 30px;
+}
+
+.legend li .legend-earth,
+.legend li .legend-planet {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	border: 2px solid #0071ff;
+	float: left;
+	margin-right: 5px;
+}
+
+.legend li .legend-planet {
+	background: rgba(145, 244, 184, 0.5);
+	border: 0;
+}
+
+.footer {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	background: #4b4b4b;
+	padding-top: 10px;
+}
+
+.footer p {
+	text-align: center;
+	color: #969696;
+}

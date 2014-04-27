@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+---
+layout: bootstrap-template
+title: Kepler planet discoveries
+---
+<link rel="stylesheet" href="planets.css"/>
+<script src="raphael-min.js"></script>
+<script src="planets.js"></script>
 
-</body>
-</html>
+<div class="container">
+    <div class="row">
+        <div class="page-header inverse">
+            <h1>Kepler planet discoveries</h1>
+        </div>
+
+        <div class="col-xs-12 meta-bar">
+            <div class="btn-group btn-group-filter" id="btn-sort-by">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Sort by <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#" data-sort-key="radius">Radius</a></li>
+                    <li><a href="#" data-sort-key="mass">Mass</a></li>
+                    <li><a href="#" data-sort-key="density">Density</a></li>
+                    <li><a href="#" data-sort-key="ecc">Eccentricity</a></li>
+                </ul>
+            </div>
+
+            <ul class="legend">
+                <li><div class="legend-planet">&nbsp;</div>Planet</li>
+                <li><div class="legend-earth">&nbsp;</div>Earth</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="planets"></div>
+<div class="footer">
+    <p>2014 André Eckardt (<a href="https://github.com/korve/">https://github.com/korve/</a>)</p>
+</div>
