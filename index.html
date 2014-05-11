@@ -9,22 +9,24 @@ title: Kepler planet discoveries
 
 <div class="container container-top">
     <div class="row">
+        <p class="page-intro">
+            This is a comparison of mass, radius and average density of other worlds in relation to earth. The planets were discovered by NASA's kepler probe since 2011.<br>
+            You can download the .csv data <a href="data/planets.csv">here</a> containing all planets scraped from NASA's site.
+        </p>
+        <div class="clearfix"></div>
         <br/>
         <div class="col-xs-12 meta-bar">
-            <p class="page-intro">
-                This is a comparison of mass, radius and average density of other worlds in relation to earth. The planets were discovered by NASA's kepler probe since 2011.<br>
-                You can download the .csv data <a href="data/planets.csv">here</a> containing all planets scraped from NASA's site.
-            </p>
             <div class="btn-group btn-group-filter" id="btn-sort-by">
-                <label>Compare by</label>
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span class="compare-by-label">Radius</span> <span class="caret"></span>
-                </button>
+                <label>Compare by
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="compare-by-label">Radius</span> <span class="caret"></span>
+                    </button>
+                </label>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="#" data-sort-key="radiusEarth">Radius</a></li>
                     <li><a href="#" data-sort-key="massEarth">Mass</a></li>
                     <li><a href="#" data-sort-key="density">Density</a></li>
-                    <!--<li><a href="#" data-sort-key="ecc">Eccentricity</a></li>-->
+                    <li><a href="#" data-sort-key="ecc">Eccentricity</a></li>
                 </ul>
             </div>
 
@@ -54,5 +56,6 @@ title: Kepler planet discoveries
 
 <div class="footer">
     <p>With thanks to NASA! <a href="http://kepler.nasa.gov/Mission/discoveries/">http://kepler.nasa.gov/Mission/discoveries/</a> </p>
-    <p><a href="https://github.com/korve/">https://github.com/korve/</a> &diams; <a href="https://korve.github.io/">https://korve.github.io/</a></p>
+    <p><a href="https://github.com/korve/">https://github.com/korve/</a></p>
+    <p><a href="https://korve.github.io/">https://korve.github.io/</a></p>
 </div>
