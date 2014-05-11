@@ -128,15 +128,29 @@ $(function(){
 			var planet = this.data('planet');
 
 			var data = '';
-			data += 'Mass:\t\t' + relPlanets.earth.mass.times(planet.massEarth) + '\tkg\r\n';
-			data += 'Mass:\t\t' + relPlanets.earth.mass.times(planet.massEarth) + '\tkg\r\n';
-			data += 'Radius:\t\t' + Math.round(relPlanets.earth.radius * planet.radiusEarth) + '\t\tkm\r\n';
-			data += 'Density:\t' + (planet.density ? planet.density.toFixed(2) : 'N/A') + '\t\tg/cm³\r\n';
-			data += 'Avg. Temp.:\t' + (planet.temp ? (planet.temp - 273.15).toFixed(2) : 'N/A') + '\t\tC°\r\n';
-			data += 'Period:\t\t' + (planet.period ? planet.period.toFixed(2) : 'N/A') + '\t\tdays\r\n';
-			data += 'SMA:\t\t' + (planet.sma || 'N/A') + '\t\tAU\r\n';
-			data += 'Eccentricity:\t' + (planet.ecc || 'N/A') + '\r\n';
-			data += 'Inclination:\t' + (planet.inc || 'N/A') + '°\r\n';
+            if(planet.massEarth)
+			    data += 'Mass:\t\t' + relPlanets.earth.mass.times(planet.massEarth) + '\tkg\r\n';
+
+            if(planet.radiusEarth)
+			    data += 'Radius:\t\t' + Math.round(relPlanets.earth.radius * planet.radiusEarth) + '\t\tkm\r\n';
+
+            if(planet.density)
+			    data += 'Density:\t' + (planet.density ? planet.density.toFixed(2) : 'N/A') + '\t\tg/cm³\r\n';
+
+            if(planet.temp)
+			    data += 'Avg. Temp.:\t' + (planet.temp ? (planet.temp - 273.15).toFixed(2) : 'N/A') + '\t\tC°\r\n';
+
+            if(planet.period)
+			    data += 'Period:\t\t' + (planet.period ? planet.period.toFixed(2) : 'N/A') + '\t\tdays\r\n';
+
+            if(planet.sma)
+			    data += 'SMA:\t\t' + (planet.sma || 'N/A') + '\t\tAU\r\n';
+
+            if(planet.ecc)
+			    data += 'Eccentricity:\t' + (planet.ecc || 'N/A') + '\r\n';
+
+            if(planet.inc)
+			    data += 'Inclination:\t' + (planet.inc || 'N/A') + '°\r\n';
 
 			metaTitle.html('<a href="' + planet.link + '">' + planet.name + '</a>');
 			metaContainer.html(data);
