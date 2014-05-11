@@ -10,6 +10,10 @@ p {
 	z-index: 400
 }
 
+.page-intro {
+    margin: 50px 0 25px;
+}
+
 .container-top {
 	margin-bottom: 50px;
 }
